@@ -1,0 +1,8 @@
+{
+    "name": "smartXray",
+    "description": "Deploy xray on Heroku.",
+    "keywords": ["xray"],
+    "website": "",
+    "repository": "https://github.com/qiumzh/smartXray.git",
+    "stack": "container"
+}
