@@ -45,7 +45,7 @@ cat << EOF > /usr/local/etc/xray/config.json
     ],
     "dns": {
         "servers": [
-            "https+local://1.1.1.1/dns-query",
+            "1.1.1.1",
             "8.8.8.8",
             "9.9.9.9",
             "208.67.222.222"
