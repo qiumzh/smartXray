@@ -13,6 +13,16 @@ rm -rf /tmp/xray
 install -d /usr/local/etc/xray
 cat << EOF > /usr/local/etc/xray/config.json
 {
+    "policy": {
+        "levels": {
+            "0": {
+                "handshake": 3,
+                "connIdle": 120,
+                "uplinkOnly": 0,
+                "downlinkOnly": 0
+            }
+        }
+    },
     "inbounds": [
         {
             "port": $PORT,
@@ -20,8 +30,7 @@ cat << EOF > /usr/local/etc/xray/config.json
             "settings": {
                 "clients": [
                     {
-                        "id": "f86886e7-a5cb-4ad3-8891-d140c1ec3902",
-                        "level": 0
+                        "id": "f86886e7-a5cb-4ad3-8891-d140c1ec3902"
                     }
                 ],
                 "decryption": "none"
