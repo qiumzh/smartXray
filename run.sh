@@ -46,31 +46,10 @@ cat << EOF > /usr/local/etc/xray/config.json
     "outbounds": [
         {
             "protocol": "freedom",
-            "settings": {
-                "domainStrategy": "UseIPv4"
-            },
+            "settings": {},
             "tag": "ip-out"
         }
-    ],
-    "dns": {
-        "servers": [
-            "1.1.1.1",
-            "8.8.8.8",
-            "9.9.9.9",
-            "208.67.222.222"
-        ],
-        "queryStrategy": "UseIPv4"
-    },
-    "routing": {
-        "domainStrategy": "IPIfNonMatch",
-        "rules": [
-            {
-                "type": "field",
-                "outboundTag": "ip-out",
-                "network": "tcp,udp"
-            }
-        ]
-    }
+    ]
 }
 EOF
 
